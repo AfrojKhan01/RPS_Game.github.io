@@ -8,15 +8,15 @@ const button = document.getElementById("Playagain-button");
 const newicon = document.getElementById("newicon");
 
 scissor.addEventListener("click", () => {
-  newicon.src = 'Scissor (1).png';
+  newicon.src = 'Scissor.png';
 });
 
 paper.addEventListener("click", () => {
-  newicon.src = "Paper (1).png";
+  newicon.src = "Paper.png";
 });
 
 rock.addEventListener("click", () => {
-  newicon.src = "Rock (1).png";
+  newicon.src = "Rock.png";
 });
 
 function disableicon() {
@@ -53,9 +53,9 @@ function Dispnone() {
 
 function pickRandomIcon() {
   var icons = [
-    "Rock (1).png",
-    "Paper (1).png",
-    "Scissor (1).png",
+    "Rock.png",
+    "Paper.png",
+    "Scissor.png",
   ];
   var randomIndex = Math.floor(Math.random() * icons.length);
   var randomIconClass = icons[randomIndex];
@@ -63,16 +63,16 @@ function pickRandomIcon() {
   var randomIconElement = document.getElementById("ss-computer");
   randomIconElement.src = randomIconClass;
 
-  if (randomIconClass === newicon.className) {
+  if (randomIconElement.src === newicon.src) {
     result.textContent = "Tie";
     result.style.color = "Yellow";
   } else if (
-    (randomIconClass === "Rock (1).png" &&
-      newicon.className === "Paper (1).png") ||
-    (randomIconClass === "Paper (1).png" &&
-      newicon.className === "Scissor (1).png") ||
-    (randomIconClass === "Scissor (1).png" &&
-      newicon.className === "Rock (1).png")
+    (randomIconElement.src === "Rock.png" &&
+      newicon.src === "Paper.png") ||
+    (randomIconElement.src === "Paper.png" &&
+      newicon.src === "Scissor.png") ||
+    (randomIconElement.src === "Scissor.png" &&
+      newicon.src === "Rock.png")
   ) {
     result.textContent = "You Win";
     result.style.color = "Green";

@@ -1,0 +1,178 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #232526; 
+background: -webkit-linear-gradient(to right, #414345, #232526);  
+}
+body>h1{
+    color: white;
+    font-size: 50px;
+}
+body>span{
+    color: #7f7d7d;
+    font-size: 30px;
+}
+.play-zone{
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    height: 320px;
+    margin-top: 50px;
+    position: relative;
+    color: white;
+}
+.play-zone>.user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.play-zone>.computer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selected-symbol{
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.symbols{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    padding: 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.symbols>div>img{
+    width: 50px;
+    cursor: pointer;
+}
+.user-c>div>img:hover{
+    cursor: not-allowed;
+}
+.user>.symbols>.rock{
+    transform: rotate(90deg);
+}
+.user>.symbols>.paper{
+    transform: scaleX(-1);
+}
+.user>.symbols>.scissor{
+    transform: scaleX(-1);
+}
+.computer>.symbols>.rock{
+    transform: rotate(-90deg) scaleX(-1);
+}
+
+.selected-symbol-user>img{
+    width: 80px;
+}
+.selected-symbol>img{
+    width: 80px;
+}
+
+.name{
+    font-size: 30px;
+}
+button{
+    padding: 10px 25px;
+    font-size: 18px;
+    border: none;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: cyan;
+    transition: all 0.3s;
+}
+#Playagain-button{
+    margin-top: 50px;
+    display: none;
+}
+
+#result{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.disabled-icon {
+    opacity: 0.5; 
+    cursor: not-allowed; 
+}
+
+
+@media screen and (max-width: 600px){
+
+body{
+    padding: 0 10px;
+}
+body>h1{
+    font-size: 30px;
+}
+body>span{
+    font-size: 18px;
+}
+.play-zone{
+    flex-direction: column-reverse;
+    align-content: space-between;
+    width: 100%;
+    height: 60vh;
+    margin-top: 30px;
+}
+.play-zone>.user{
+    flex-direction: row;
+    justify-content: space-around;
+}
+.play-zone>.computer{
+    flex-direction: row;
+    justify-content: space-around;
+}
+.symbols{
+    margin-top: 0px;
+    width: 200px;
+    border: none;
+}
+.symbols>div>img{
+    width: 40px;
+}
+
+.selected-symbol-user{
+    position: absolute;
+    bottom: 100px;
+}
+.selected-symbol{
+    position: absolute;
+    top: 90px;
+}
+.selected-symbol-user>img{
+    width: 60px;
+}
+.selected-symbol>img{
+    width: 60px;
+}
+
+.name{
+    font-size: 25px;
+}
+
+#Playagain-button{
+    margin-top: 50px;
+}
+
+#result{
+    margin-top: 0px;
+}
+}

@@ -51,6 +51,7 @@ function Dispnone() {
   location.reload();
 }
 
+
 function pickRandomIcon() {
   var icons = [
     "Rock.png",
@@ -63,18 +64,19 @@ function pickRandomIcon() {
   var randomIconElement = document.getElementById("ss-computer");
   randomIconElement.src = randomIconClass;
 
+  const roc = document.getElementById('roc');
+  const pap = document.getElementById('pap');
+  const sic = document.getElementById('sic');
+
   if (randomIconElement.src === newicon.src) {
     result.textContent = "Tie";
     result.style.color = "Yellow";
   } else if (
-    (randomIconElement.src === "Rock.png" &&
-      newicon.src === "Paper.png") ||
-    (randomIconElement.src === "Paper.png" &&
-      newicon.src === "Scissor.png") ||
-    (randomIconElement.src === "Scissor.png" &&
-      newicon.src === "Rock.png")
-  ) {
-    result.textContent = "You Win";
+    (randomIconElement.src === roc.src && newicon.src === pap.src) ||
+    (randomIconElement.src === pap.src && newicon.src === sic.src) ||
+    (randomIconElement.src === sic.src && newicon.src === roc.src))
+  {
+    result.textContent = "You win";
     result.style.color = "Green";
   } else {
     result.textContent = "You Loss";

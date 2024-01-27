@@ -62,17 +62,12 @@ body>span{
 .user-c>div>img:hover{
     cursor: not-allowed;
 }
-.user>.symbols>.rock{
-    transform: rotate(90deg);
-}
+
 .user>.symbols>.paper{
     transform: scaleX(-1);
 }
 .user>.symbols>.scissor{
     transform: scaleX(-1);
-}
-.computer>.symbols>.rock{
-    transform: rotate(-90deg) scaleX(-1);
 }
 
 .selected-symbol-user>img{
@@ -176,3 +171,4 @@ body>span{
     margin-top: 0px;
 }
 }
+
